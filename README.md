@@ -1,5 +1,5 @@
 # Physics 5C Lab Code
-## By Ayushmaan Aggarwal
+By Ayushmaan Aggarwal
 
 ## Outline of folders and files
 ### Lab 00 - Statistics and Geometric Optics
