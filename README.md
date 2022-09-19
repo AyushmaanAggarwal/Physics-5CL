@@ -10,4 +10,4 @@ By Ayushmaan Aggarwal
 ### Lab 01 - Optical Instruments
 
 ### DataAnalysis.py
-This file is imported into the ipynb files used in the labs to consolidate common analysis functions between labs such as calculating covariance and correlation coefficents.
+- This file is imported into the ipynb files used in the labs to consolidate common analysis functions between labs such as calculating covariance and correlation coefficents.
