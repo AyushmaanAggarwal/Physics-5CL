@@ -9,7 +9,7 @@ By Ayushmaan Aggarwal
   - Experimentally determine the magnification of a lens 
 ### Lab 01 - Optical Instruments
 - Experiment 4.ipynb
-  - Calculate angular magificiation through the creation of a compound microscope
+  - Calculate angular magnification through the creation of a compound microscope
 
 ### DataAnalysis.py
 - This file is imported into the ipynb files used in the labs to consolidate common analysis functions between labs such as calculating covariance and correlation coefficents.
