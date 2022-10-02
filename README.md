@@ -8,6 +8,8 @@ By Ayushmaan Aggarwal
 - Experiment 3.ipynb
   - Experimentally determine the magnification of a lens 
 ### Lab 01 - Optical Instruments
+- Experiment 1.ipynb
+  - Estimating the focal point of a lens through a compound lens
 - Experiment 4.ipynb
   - Calculate angular magnification through the creation of a compound microscope
 
