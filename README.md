@@ -14,6 +14,7 @@ By Ayushmaan Aggarwal
   - Calculate angular magnification through the creation of a compound microscope
 ### Lab 02 - Polarization
 - Experiment 1.ipynb
-  - Compared the falloff of relative intensity of a light over a distance and the change in light intensity due to the relative angle of the polarizers with 2 curve fits
+  - Compared the falloff of relative intensity of a light over a distance
+  - Compared the change in light intensity due to the relative angle of linear polarizers
 ### DataAnalysis.py
 - This file is imported into the ipynb files used in the labs to consolidate common analysis functions between labs such as calculating covariance and correlation coefficents.
