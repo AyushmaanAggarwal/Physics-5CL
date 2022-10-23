@@ -38,3 +38,21 @@ def correlation_coefficients(x,y):
     sigma_x = np.sqrt(variance(x))
     sigma_y = np.sqrt(variance(y))
     return sigma_xy/(sigma_x*sigma_y)
+
+def linear_fit_error(x, y, m, c, yerr):
+    assert len(x)==len(y)
+    N = len(x)
+    y_pred = np.array(x)*m + c
+    alpha_cu = common_uncertainty(y_pred, y, m, c)
+    alpha_cu = alpha_cu if alpha_cu > yerr else yerr
+    sigma_x = variance(x)
+    
+    alpha_m = alpha_cu/(N*sigma_x**2)
+    
+    alpha_c = np.mean(np.array(x)**2)*alpha_m
+    return alpha_m, alpha_c
+
+def common_uncertainty(y_pred, y, m, c):
+    assert len(y_pred)==len(y)
+    summation = sum((np.array(y) - np.array(y_pred))**2)
+    return np.sqrt(summation/(len(y_pred)-2))
