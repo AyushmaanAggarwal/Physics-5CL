@@ -16,5 +16,24 @@ By Ayushmaan Aggarwal
 - Experiment 1.ipynb
   - Compared the falloff of relative intensity of a light over a distance
   - Compared the change in light intensity due to the relative angle of linear polarizers
+  
+### Lab 03 - Diffraction
+- Experiment 3.ipynb
+  - Determining the diffraction pattern changes with varying slit widths
+- Experiment 5.ipynb
+  - Calculate the slit thickness, center-to-center width, and missing orders from the thick double slit experiment
+### Lab 04 - Photoelectric Effect
+- Lab 4.ipynb
+  - Experiment 1 - Diffraction gratings to determine wavelengths
+  - Experiment 2 - Spectrum of LEDs
+    - Deterimine how wide the LED wavelength spectrum is
+  - Experiment 3
+    - Measure h and work function using LEDs
+  - Experiment 4
+    - Measure h and work function using Lasers
+### Lab 05
+  - Calculate the wavelength of spectral lines using a slit scale for Helium, Hydrogen, Argon, and Nitrogen
+
+### Lab 05 - Atomic Spectra
 ### DataAnalysis.py
 - This file is imported into the ipynb files used in the labs to consolidate common analysis functions between labs such as calculating covariance and correlation coefficents.
