@@ -56,3 +56,25 @@ def common_uncertainty(y_pred, y, m, c):
     assert len(y_pred)==len(y)
     summation = sum((np.array(y) - np.array(y_pred))**2)
     return np.sqrt(summation/(len(y_pred)-2))
+
+def weighted_least_squares_linear(x, y, err):
+    sum_mult2 = lambda x, y: sum(np.multiply(x, y))
+    sum_mult3 = lambda x, y, z: sum(np.multiply(np.multiply(x, y), z))
+    
+    w = np.divide(1, np.power(err, 2))
+    x2 = np.power(x, 2)
+    
+    delta = sum(w)*sum_mult2(w, x2) - np.power(sum_mult2(w, x), 2)
+    m = (sum(w)*sum_mult3(w, x, y) - sum_mult2(w, x)*sum_mult2(w, y))/delta
+    c = (sum_mult2(w, y) - m*sum_mult2(w, x))/sum(w)
+    
+    m_err = np.sqrt(sum(w)/delta)
+    c_err = np.sqrt(sum_mult2(w, x2)/delta)
+    
+    y_pred = np.add(np.multiply(m, x), c)
+    res = np.subtract(y_pred, y)
+    chi_squared = sum_mult2(w, np.power(res, 2))
+    return [m, c], [m_err, c_err], [y_pred, res], [chi_squared]
+    
+
+    
