@@ -58,6 +58,9 @@ def common_uncertainty(y_pred, y, m, c):
     return np.sqrt(summation/(len(y_pred)-2))
 
 def weighted_least_squares_linear(x, y, err):
+    """
+    Returns: [m, c], [m_err, c_err], [y_pred, res], [chi_squared]
+    """
     sum_mult2 = lambda x, y: sum(np.multiply(x, y))
     sum_mult3 = lambda x, y, z: sum(np.multiply(np.multiply(x, y), z))
     
