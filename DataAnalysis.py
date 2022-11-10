@@ -79,6 +79,7 @@ def weighted_least_squares_linear(x, y, err):
     res = np.subtract(y_pred, y)
     chi_squared = sum_mult2(w, np.power(res, 2))
     print(f"m = {m:.2}±{m_err:.2}, c = {c:.2}±{c_err:.2}, Χ² = {chi_squared:.2}")
+    print(f"Equation: y = ({m:.2}±{m_err:.2})*x + ({c:.2}±{c_err:.2})")
     return [m, c], [m_err, c_err], [y_pred, res], [chi_squared]
 
 def get_uncertain_array(x, error):
