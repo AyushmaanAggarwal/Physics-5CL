@@ -3,9 +3,10 @@
 # Date Created: 9/13/2022
 
 # Currently implemented features:
-# Covariance, Variance, Standard Deviation, Correlation Coefficents
+# Covariance, Variance, Standard Deviation, Correlation Coefficents, more
 
 import numpy as np
+import uncertainties as un
 
 def covariance(x, y):
     assert len(x) == len(y)
@@ -77,7 +78,12 @@ def weighted_least_squares_linear(x, y, err):
     y_pred = np.add(np.multiply(m, x), c)
     res = np.subtract(y_pred, y)
     chi_squared = sum_mult2(w, np.power(res, 2))
+    print(f"m = {m:.2}±{m_err:.2}, c = {c:.2}±{c_err:.2}, Χ² = {chi_squared:.2}")
     return [m, c], [m_err, c_err], [y_pred, res], [chi_squared]
-    
 
+def get_uncertain_array(x, error):
+    return [un.ufloat(val, error) for val in x]
+
+def seperate_uncertainty_array(x):
+    return [val.nominal_value for val in x], [val.std_dev for val in x]
     
